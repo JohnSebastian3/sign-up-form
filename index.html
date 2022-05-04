@@ -15,34 +15,62 @@
       <img src="odin-lined.png" class="logo">
       <h1 class="company-name">Project Litur</h1>
     </div>
+    <h4>Photo by <a href="https://unsplash.com/@j_mk18/collections" target="_blank">Jon</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></h4>
   </section>
 
 
 
-  <section class="form-container">
+  <section class="main-container">
 
     <section class="disclaimer">
-      <h2>Disclaimer: This is not a real online service!</h2>
+      <h2><strong>Disclaimer: </strong>This is not a real online service!</h2>
       <h2>You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.</h2>
       <h2>You <em>know</em> you want to.</h2>
     </section>
 
-    <section class="form">
+    <section class="form-container">
+      
       <h2>Let's do this!</h2>
-      <form>
-        <label for="first-name">FIRST NAME</label>
-        <input type="text" id="first-name" name="first-name" placeholder="First Name"/>
-        <label for="last-name">LAST NAME</label>
-        <input type="text" id="last-name" name="last-name" placeholder="Last Name"/>
-        <label for="email">EMAIL</label>
-        <input type="email" id="email" name="email"  placeholder="example@email.com"/>
-        <label for="phone-number">PHONE NUMBER</label>
-        <input type="tel" id="phone-number" name="phone-number" placeholder="() ___ - ____"/>
-        <label for="password">PASSWORD</label>
-        <input type="password" id="password" name="password"/>
-        <label for="password-confirm">CONFIRM PASSWORD</label>
-        <input type="password" id="password-confirm" name="password-confirm"/>
+      <form id="sign-up">
+        <div class="form">
+          <div class="input-container">
+            <label for="first-name">FIRST NAME</label>
+            <input type="text" id="first-name" name="first-name"  required/>
+          </div>
+  
+          <div class="input-container">
+            <label for="last-name">LAST NAME</label>
+            <input type="text" id="last-name" name="last-name"  required/>
+          </div>
+  
+          <div class="input-container">
+            <label for="email">EMAIL</label>
+            <input type="email" id="email" name="email"   required/>
+          </div>
+  
+          <div class="input-container">
+            <label for="phone-number">PHONE NUMBER</label>
+            <input type="tel" id="phone-number" name="phone-number"  required/>
+          </div>
+  
+          <div class="input-container">
+            <label for="password">PASSWORD</label>
+            <input type="password" id="password" name="password" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
+            " required/>
+          </div>
+  
+          <div class="input-container">
+            <label for="password-confirm">CONFIRM PASSWORD</label>
+            <input type="password" id="password-confirm" name="password-confirm" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
+            " required/>
+          </div>
+        </div>
       </form>
+    </section>
+    
+    <section class="account">
+      <button class="button" form="sign-up" type="submit">Create Account</button>
+      <p>Already have an account? <a href="">Log in</a></p>
     </section>
 
   </section>
