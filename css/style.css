@@ -12,6 +12,7 @@
 body {
   background-color: #fafafa;
   font-family: 'Norse-Bold', sans-serif;
+  display: flex;
 }
 
 /* img {
@@ -24,11 +25,12 @@ body {
 
 .image-container {
   background-image: url('/jon-r8AFUpRp0J0-unsplash.jpg');
-  width: 650px;
+  /* width: 650px; */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: left;
   z-index: 0;
+  flex-basis: 40%;
 }
 
 .logo-banner {
@@ -56,15 +58,16 @@ body {
 /* FORM CONTAINER */
 
 .form-container {
-  margin-left: 800px;
+  /* margin-left: 650px; */
+  flex-basis: 60%;
 }
 
 
 
 .fixed-left {
-  position: absolute;
+  /* position: absolute;
   left: 0;
-  top: 0;
+  top: 0; */
 }
 
 .full-height {
