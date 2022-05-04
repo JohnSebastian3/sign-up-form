@@ -1,8 +1,72 @@
-body {
-  background-color: #202020;
+* {
+  margin: 0;
+  box-sizing: border-box;
 }
 
-img {
-  width: 400px;
+@font-face {
+  font-family: 'Norse-Bold';
+  src: url("C:/Users/Drose/OneDrive/Documents/Fonts/Norse-Bold.otf");
+}
+
+
+body {
+  background-color: #fafafa;
+  font-family: 'Norse-Bold', sans-serif;
+}
+
+/* img {
+  width: 700px;
   height: auto;
+} */
+
+
+/* IMAGE CONTAINER */
+
+.image-container {
+  background-image: url('/jon-r8AFUpRp0J0-unsplash.jpg');
+  width: 650px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: left;
+  z-index: 0;
+}
+
+.logo-banner {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(3,3,5,0.4);
+  margin-top: 20rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+}
+.company-name {
+  color: #fafafa;
+  font-size: 4rem;
+}
+
+
+
+/* FORM CONTAINER */
+
+.form-container {
+  margin-left: 800px;
+}
+
+
+
+.fixed-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.full-height {
+  height: 100vh;
 }
