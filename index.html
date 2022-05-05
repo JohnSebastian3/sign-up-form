@@ -6,6 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&family=IBM+Plex+Mono:wght@200;300&display=swap" rel="stylesheet">
   <title>Document</title>
 </head>
 <body>
@@ -15,7 +21,7 @@
       <img src="odin-lined.png" class="logo">
       <h1 class="company-name">Project Litur</h1>
     </div>
-    <h4>Photo by <a href="https://unsplash.com/@j_mk18/collections" target="_blank">Jon</a> on <a href="https://unsplash.com/" target="_blank">Unsplash</a></h4>
+    <h4 id="photo-author">Photo by <a class="author" href="https://unsplash.com/@j_mk18/collections" target="_blank">Jon</a> on <a class="author" href="https://unsplash.com/" target="_blank">Unsplash</a></h4>
   </section>
 
 
@@ -33,36 +39,40 @@
       <h2>Let's do this!</h2>
       <form id="sign-up">
         <div class="form">
-          <div class="input-container">
+          <div class="form-control">
             <label for="first-name">FIRST NAME</label>
-            <input type="text" id="first-name" name="first-name"  required/>
+            <input type="text" id="first-name" name="first-name" placeholder=" " required/>
+          
           </div>
   
-          <div class="input-container">
+          <div class="form-control">
             <label for="last-name">LAST NAME</label>
-            <input type="text" id="last-name" name="last-name"  required/>
+            <input type="text" id="last-name" name="last-name" placeholder=" " required/>
+          
           </div>
   
-          <div class="input-container">
+          <div class="form-control">
             <label for="email">EMAIL</label>
-            <input type="email" id="email" name="email"   required/>
+            <input type="email" id="email" name="email"  placeholder=" " required/>
+          
           </div>
   
-          <div class="input-container">
+          <div class="form-control">
             <label for="phone-number">PHONE NUMBER</label>
-            <input type="tel" id="phone-number" name="phone-number"  required/>
+            <input type="tel" id="phone-number" placeholder=" " name="phone-number" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="Format Required: 123-456-7890" required/>
+          
           </div>
   
-          <div class="input-container">
+          <div class="form-control">
             <label for="password">PASSWORD</label>
-            <input type="password" id="password" name="password" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
-            " required/>
+            <input type="password" id="password" class="error" name="password" placeholder=" " minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" title="Please enter a password that is at least 8 digits long, has at least one uppercase character, at least one lower case character, and at least one number." required/>
+           
           </div>
   
-          <div class="input-container">
+          <div class="form-control error">
             <label for="password-confirm">CONFIRM PASSWORD</label>
-            <input type="password" id="password-confirm" name="password-confirm" minlength="8" pattern="(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$
-            " required/>
+            <input type="password" id="password-confirm" class="error" name="password-confirm" placeholder=" " minlength="8" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required/>
+            <small class="hidden">* Passwords do not match</small>
           </div>
         </div>
       </form>

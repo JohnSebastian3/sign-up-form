@@ -3,38 +3,56 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Norse-Bold';
-  src: url("C:/Users/Drose/OneDrive/Documents/Fonts/Norse-Bold.otf");
-}
-
-
 body {
-  font-family: 'Norse-Bold', sans-serif;
+  font-family: 'Amatic SC', sans-serif;
   display: flex;
+  max-height: 100vh;
 }
 
 /* img {
   width: 700px;
   height: auto;
 } */
+a {
+  text-decoration: none;
+  color:rgb(179, 123, 211);
+}
 
 input {
   height: 20px;
-  width: 250px;
-  padding: 1rem;
-  border: 1px solid rgba(3,3,5,0.2);
+  width: 220px;
+  padding: .8rem;
+  border: 2px solid rgba(3,3,5,0.2);
+  border-radius: 4px;
 }
 input:valid {
-  border: 5px solid green;
+  border-color: rgb(32, 177, 32);
+
 }
-/* input:invalid {
-  border: 5px solid red;
+input:focus {
+  outline: none;
+  border-color: rgb(96, 130, 240);
+  box-shadow: inset 1px 1px 2px 1px rgba(0,0,0,0.3);
+}
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid #e74c3c;
+  color: #e74c3c;
+}
+
+small {
+  /* visibility: hidden; */
+  color: red;
+}
+strong {
+  color: rgb(179, 112, 255);
+}
+.hidden {
+  visibility: hidden;
+}
+/* .form-control.error::after {
+  content: '* Passwords do not match.';
+  color: #e74c3c;
 } */
-
-
-
-
 
 /* IMAGE CONTAINER */
 
@@ -46,13 +64,14 @@ input:valid {
   background-position: left;
   z-index: 0;
   flex-basis: 40%;
+  position: relative;
 }
 
 .logo-banner {
   position: relative;
   z-index: 1;
   background-color: rgba(3,3,5,0.4);
-  margin-top: 15rem;
+  margin-top: 13rem;
   padding: 1rem;
   display: flex;
   justify-content: center;
@@ -67,12 +86,23 @@ input:valid {
   color: #fafafa;
   font-size: 4rem;
 }
-
+#photo-author {
+  color: #ddd;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  position: absolute;
+  bottom: 20px;
+  right: 10%;
+}
+.author {
+  color:rgb(179, 112, 255);
+}
 
 
 /* FORM CONTAINER */
 
 .main-container {
+  font-family: 'IBM Plex Mono', sans-serif;
   /* margin-left: 650px; */
   flex-basis: 60%;
   background-color: #efefef;
@@ -87,7 +117,7 @@ input:valid {
 }
 .disclaimer {
   padding: 3rem;
-  margin-top: 5rem;
+  margin-top: 4rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -96,9 +126,9 @@ input:valid {
 .form {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 2rem;
+  margin-bottom: .5rem;
   column-gap: 5rem;
-  row-gap: 1rem;
+  row-gap: 1.4rem;
 }
 .form h2 {
   flex-basis: 100%;
@@ -106,7 +136,7 @@ input:valid {
 .account {
   padding: 3rem;
 }
-.input-container {
+.form-control {
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -121,17 +151,63 @@ input:valid {
   color:#fafafa;
   border:none;
   border-radius: 5px;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: rgb(182, 154, 227);
 }
 .account .button {
   margin-bottom: 2rem;
 }
 
-.fixed-left {
-  /* position: absolute;
-  left: 0;
-  top: 0; */
-}
-
 .full-height {
   height: 100vh;
 }
+
+
+@media screen and (max-width: 1210px) {
+
+  body {
+    flex-direction: column;
+  }
+
+  .logo-banner {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    background-color: rgba(0,0,0,.3);
+  }
+
+  #photo-author {
+    color: #222;
+  }
+}
+
+@media  screen and (max-width: 620px) {
+  /* .form {
+    column-gap: 8rem;
+  } */
+  .form-container h2 {
+    text-align: center;
+  }
+  .form {
+    flex-direction: column; 
+  }
+  .form-control {
+    width: auto;
+    margin: 0 auto;
+  }
+
+  .account {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    padding: .5rem 2rem;
+  }
+  #photo-author {
+    top: 20px;
+  }
+
+}
+
