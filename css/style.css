@@ -57,7 +57,7 @@ strong {
 /* IMAGE CONTAINER */
 
 .image-container {
-  background-image: url('/jon-r8AFUpRp0J0-unsplash.jpg');
+  background-image: url('../jon-r8AFUpRp0J0-unsplash.jpg');
   /* width: 650px; */
   background-size: cover;
   background-repeat: no-repeat;
